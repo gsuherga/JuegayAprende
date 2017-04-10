@@ -60,13 +60,12 @@
             android:text=""
             android:onClick="Edificios"></RadioButton>
 
+    </RadioGroup>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@android:color/black"></View>
-
-
-    </RadioGroup>
 
         <RadioGroup
             android:id="@+id/ciudades"

@@ -24,43 +24,25 @@ public class MainActivity extends AppCompatActivity {
 
         Random r = new Random();
         int formato = r.nextInt();
+        Intent intent;
 
         /*
             Aquí decidimos formato vertical o apaisado de forma aleatoria.
          */
 
         if (formato % 2 == 0){
-            Intent intent = new Intent(this, horizontal.class);
-            intent.putExtra("acertadas", acertadas);
-            intent.putExtra("recuento", recuento);
+            intent = new Intent(this, horizontal.class);
 
-
-          /*  Log.d(getClass().getName(), "acertadas = " + acertadas);
-              Log.d(getClass().getName(), "recuento = " + recuento);
-          */
-            if (intent != null) {
-           /*    Log.d(getClass().getName(), "acertadas = " + acertadas);
-                Log.d(getClass().getName(), "recuento = " + recuento);
-           */
-                startActivity(intent);
-            }
         } else {
-            Intent intent = new Intent(this, vertical.class);
-            intent.putExtra("acertadas", acertadas);
-            intent.putExtra("recuento", recuento);
+            intent = new Intent(this, vertical.class);
 
-         /*   Log.d(getClass().getName(), "acertadas = " + acertadas);
-              Log.d(getClass().getName(), "recuento = " + recuento);*/
+        }
+        intent.putExtra("acertadas", acertadas);
+        intent.putExtra("recuento", recuento);
 
+        if (intent != null) {
 
-            if (intent != null) {
-
-                /* Log.d(getClass().getName(), "acertadas = " + acertadas);
-                   Log.d(getClass().getName(), "recuento = " + recuento);*/
-
-                startActivity(intent);
-            }
-
+            startActivity(intent);
         }
 
     }

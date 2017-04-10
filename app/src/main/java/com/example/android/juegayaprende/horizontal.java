@@ -239,7 +239,7 @@ public class horizontal extends AppCompatActivity {
                         acertadas = acertadas + 1;
                         sumarPuntoEdificio = false;
                         restarPuntoEdificio = true;
-                    }else if(radioButton1.equals(correctae) || radioButton2.equals(correctae) && restarPuntoEdificio == true){
+                    }else if((radioButton1.equals(correctae) || radioButton2.equals(correctae)) && restarPuntoEdificio == true){
                         acertadas = acertadas - 1;
                         sumarPuntoEdificio = true;
                         restarPuntoEdificio = false;
@@ -262,10 +262,10 @@ public class horizontal extends AppCompatActivity {
                         acertadas = acertadas + 1;
                         sumarPuntoCiudad = false;
                         restarPuntoCiudad = true;
-                    }else if(!radioButton4.equals(correctae) && restarPuntoEdificio == true){
+                    }else if(!radioButton4.equals(correctae) && restarPuntoCiudad == true){
                         acertadas = acertadas - 1;
-                        restarPuntoEdificio = false;
-                        sumarPuntoEdificio = true;
+                        restarPuntoCiudad = false;
+                        sumarPuntoCiudad = true;
                     }
                 }
                 break;
@@ -275,10 +275,10 @@ public class horizontal extends AppCompatActivity {
                         acertadas = acertadas + 1;
                         sumarPuntoCiudad = false;
                         restarPuntoCiudad = true;
-                    }else if(!radioButton5.equals(correctae) && restarPuntoEdificio ==true){
+                    }else if(!radioButton5.equals(correctae) && restarPuntoCiudad ==true){
                         acertadas = acertadas - 1;
-                        restarPuntoEdificio = false;
-                        sumarPuntoEdificio = true;
+                        restarPuntoCiudad = false;
+                        sumarPuntoCiudad = true;
                     }
                 }
                 break;
@@ -288,10 +288,10 @@ public class horizontal extends AppCompatActivity {
                         acertadas = acertadas + 1;
                         sumarPuntoCiudad = false;
                         restarPuntoCiudad = true;
-                    }else if(radioButton4.equals(correctae) || radioButton5.equals(correctae) && restarPuntoEdificio ==true){
+                    }else if((radioButton4.equals(correctae) || radioButton5.equals(correctae)) && restarPuntoCiudad ==true){
                         acertadas = acertadas - 1;
-                        restarPuntoEdificio = false;
-                        sumarPuntoEdificio = true;
+                        restarPuntoCiudad = false;
+                        sumarPuntoCiudad = true;
                     }
                 }
                 break;
@@ -303,7 +303,7 @@ public class horizontal extends AppCompatActivity {
         sumarPuntoEdificio = true;
         restarPuntoCiudad = false;
         restarPuntoEdificio = false;
-        recuento = recuento +1;
+        recuento = recuento +2;
 
         if (recuento == 16){
             mostrarPuntos(acertadas,recuento);
