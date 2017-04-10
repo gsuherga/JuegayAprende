@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Juega y Aprende </string>
+    <string name="subtitulo">" Contesta preguntas, gana puntos y aprende"</string>
+    <string name="puntos">Aciertos: </string>
+    <string name="fallos">Fallos: </string>
+
+    <string name="Jugar">Jugar</string>
+
+    <!--  Preguntas y respuestas: ESPAÑA-->
+
+    <!--  Respuestas: capitales o ciudades más pobladas, ordenadas por comunidades!-->
+
+
+    <string-array name="ciudad">
+    <!-- Andalucía -->
+
+    <item>Sevilla</item>
+    <item>Cádiz</item>
+    <item>Córdoba</item>
+    <item>Huelva</item>
+    <item>Almería</item>
+    <item>Jaen</item>
+    <item>Granada</item>
+    <item>Málaga</item>
+
+    <!-- Extremadura -->
+
+    <item>Cáceres</item>
+    <item>Mérida</item>
+    <!-- Castilla La-Mancha -->
+
+    <item>Ciudad Real</item>
+    <item>Albacete</item>
+    <item>Toledo</item>
+    <item>Cuenca</item>
+    <item>Guadalajara</item>
+
+    <!--Murcia -->
+
+    <item>Murcia</item>
+
+    <!--Cataluña-->
+
+    <item>Barcelona</item>
+    <item>Tarragona</item>
+    <item>Lérida</item>
+    <item>Gerona</item>
+
+    <!-- Castilla y León -->
+
+    <item>Burgos</item>
+    <item>Valladolid</item>
+    <item>Soria</item>
+    <item>Palencia</item>
+    <item>Salamanca</item>
+    <item>Segovia</item>
+    <item>León</item>
+    <item>Ávila</item>
+    <item>Zamora</item>
+
+
+    <!--La Rioja -->
+
+    <item>Logroño</item>
+
+
+    <!-- Galicia-->
+
+    <item>Santiago de Compostela</item>
+    <item>Vigo</item>
+    <item>Lugo</item>
+    <item>Orense</item>
+
+
+    <!--Islas Baleares-->
+
+    <item>Palma de Mallorca</item>
+
+    <!--Asturias-->
+
+    <item>Oviedo</item>
+
+    <!--Cantabria-->
+
+    <item>Santander</item>
+
+    <!--País Vasco-->
+
+    <item>Vitoria</item>
+    <item>Bilbao</item>
+    <item>San Sebastian</item>
+
+    <!--Navarra -->
+
+    <item>Pamplona</item>
+
+    <!--Aragón-->
+
+    <item>Zaragoza</item>
+    <item>Teruel</item>
+    <item>Huesca</item>
+    
+    <!--Islas Canarias-->
+
+    <item>Santa Cruz de Tenerife</item>
+    <item>Las Palmas de Gran Canaria</item>
+
+
+    <!--Valencia-->
+
+    <item>Valencia</item>
+    <item>Castellón de la Plana</item>
+    <item>Alicante</item>
+
+    <!--Madrid-->
+
+    <item>Madrid</item>
+
+    </string-array>
+
+    <string-array name="edificio">
+
+    <!-- Edificios -->
+
+    <item>Catedral</item>
+    <item>Acueducto</item>
+    <item>Basílica</item>
+    <item>Mezquita</item>
+    <item>Pasaje</item>
+    <item>Alhambra</item>
+    <item>Plaza</item>
+    <item>Alcázar</item>
+
+    </string-array>
+
+    <!-- Ninguna opción correcta-->
+
+    <string name="Ninguna">Ninguna</string>
+    <string name="Acueducto">Acueducto</string>
+    <string name="Albacete">Albacete</string>
+    <string name="Alcazar">Alcázar</string>
+    <string name="Alhambra">Alhambra</string>
+    <string name="Barcelona">Barcelona</string>
+    <string name="Basilica">Basílica</string>
+    <string name="Burgos">Burgos</string>
+    <string name="Catedral">Catedral</string>
+    <string name="Cordoba">Cordoba</string>
+    <string name="Granada">Granada</string>
+    <string name="Leon">León</string>
+    <string name="Madrid">Madrid</string>
+    <string name="Mezquita">Mezquita</string>
+    <string name="Pasaje">Pasaje</string>
+    <string name="Plaza">Plaza</string>
+    <string name="Santiago">Santiago de Compostela</string>
+    <string name="Segovia">Segovia</string>
+    <string name="Sevilla">Sevilla</string>
+    <string name="pulsa">Pulsa aquí  para jugar de nuevo</string>
+
+</resources>

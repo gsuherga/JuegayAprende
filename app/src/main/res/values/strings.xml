@@ -1,0 +1,166 @@
+<resources>
+    <string name="subtitulo">Answer questions, gets points and learn</string>
+    <string name="Jugar">Play</string>
+    <string name="app_name">Play and learn</string>
+    <string name="fallos">Mistakes: </string>
+    <string name="puntos">Right asnwers: </string>
+    <string name="pulsa">Click here to play again</string>
+
+
+    <string-array name="ciudad">
+        <!-- Andalucía -->
+
+        <item>Seville</item>
+        <item>Cádiz</item>
+        <item>Córdoba</item>
+        <item>Huelva</item>
+        <item>Almería</item>
+        <item>Jaen</item>
+        <item>Granada</item>
+        <item>Málaga</item>
+
+        <!-- Extremadura (hasta aquí van 8)-->
+
+        <item>Cáceres</item>
+        <item>Mérida</item>
+
+        <!-- Castilla La-Mancha (hasta aquí van 10) -->
+
+        <item>Ciudad Real</item>
+        <item>Albacete</item>
+        <item>Toledo</item>
+        <item>Cuenca</item>
+        <item>Guadalajara</item>
+
+        <!--Murcia(hasta aquí van 15)-->
+
+        <item>Murcia</item>
+
+        <!--Cataluña (hasta aquí van 16)-->
+
+        <item>Barcelona</item>
+        <item>Tarragona</item>
+        <item>Lérida</item>
+        <item>Gerona</item>
+
+        <!-- Castilla y León (hasta aquí van 20) -->
+
+        <item>Burgos</item>
+        <item>Valladolid</item>
+        <item>Soria</item>
+        <item>Palencia</item>
+        <item>Salamanca</item>
+        <item>Segovia</item>
+        <item>León</item>
+        <item>Ávila</item>
+        <item>Zamora</item>
+
+
+        <!--La Rioja (hasta aquí van 29)-->
+
+        <item>Logroño</item>
+
+
+        <!-- Galicia (hasta aquí van 30)-->
+
+        <item>Santiago de Compostela</item>
+        <item>Vigo</item>
+        <item>Lugo</item>
+        <item>Orense</item>
+
+
+        <!--Islas Baleares (hasta aquí van 34)-->
+
+        <item>Palma de Mallorca</item>
+
+        <!--Asturias (hasta aquí van 35)-->
+
+        <item>Oviedo</item>
+
+        <!--Cantabria (hasta aquí van 36)-->
+
+        <item>Santander</item>
+
+        <!--País Vasco (hasta aquí van 37)-->
+
+        <item>Vitoria</item>
+        <item>Bilbao</item>
+        <item>San Sebastian</item>
+
+        <!--Navarra (hasta aquí van 40)-->
+
+        <item>Pamplona</item>
+
+        <!--Aragón (hasta aquí van 41)-->
+
+        <item>Zaragoza</item>
+        <item>Teruel</item>
+        <item>Huesca</item>
+
+        <!--Islas Canarias (hasta aquí van 44)-->
+
+        <item>Santa Cruz de Tenerife</item>
+        <item>Las Palmas de Gran Canaria</item>
+
+
+        <!--Valencia (hasta aquí van 46)-->
+
+        <item>Valencia</item>
+        <item>Castellón de la Plana</item>
+        <item>Alicante</item>
+
+        <!--Madrid (hasta aquí van 49)-->
+
+        <item>Madrid</item>
+
+
+    </string-array>
+
+    <string-array name="edificio">
+
+        <!-- Edificios -->
+
+        <item>Cathedral</item>
+        <item>Aqueduct</item>
+        <item>Basilica</item>
+        <item>Mosque</item>
+        <item>Pasaje</item>
+        <item>Alhambra</item>
+        <item>Square</item>
+        <item>Alcazar (Palace)</item>
+
+    </string-array>
+
+    <!-- Ninguna opción correcta-->
+
+    <string name="Ninguna">None</string>
+
+    <!--Respuestas a las preguntas-->
+
+    <!--Ciudades-->
+
+    <string name="Segovia">Segovia</string>
+    <string name="Burgos">Burgos</string>
+    <string name="Santiago">Santiago de Compostela</string>
+
+    <string name="Albacete">Albacete</string>
+    <string name="Sevilla">Seville</string>
+    <string name="Granada">Granada</string>
+    <string name="Barcelona">Barcelona</string>
+    <string name="Cordoba">Cordoba</string>
+    <string name="Madrid">Madrid</string>
+    <string name="Leon">Leon</string>
+
+    <!--Edificios-->
+
+    <string name="Acueducto">Aqueduct</string>
+    <string name="Catedral">Cathedral</string>
+    <string name="Alhambra">Alhambra</string>
+    <string name="Pasaje">Pasaggeway</string>
+    <string name="Plaza">Square</string>
+    <string name="Alcazar">Alcazar (Palace)</string>
+    <string name="Basilica">Basilica</string>
+    <string name="Mezquita">Mosque</string>
+
+
+</resources>

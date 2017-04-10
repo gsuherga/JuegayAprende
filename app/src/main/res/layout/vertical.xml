@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.juegayaprende.vertical">
+
+
+<LinearLayout
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/foto_vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/v1"
+        android:scaleType="centerCrop"
+         />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/edificios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <RadioButton
+            android:id="@+id/primera"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:onClick="Edificios"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/segunda"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:onClick="Edificios"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/tercera"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:onClick="Edificios"></RadioButton>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"></View>
+
+
+    </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/ciudades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/cuarta"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:onClick="ciudades"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/quinta"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:onClick="ciudades"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/sexta"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:onClick="ciudades">
+
+        </RadioButton>
+
+    </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="seguir"
+        android:src="@mipmap/flecha"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="reiniciar"
+        android:src="@mipmap/reiniciar" />
+
+    <TextView
+        android:id="@+id/Puntuacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/black"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:visibility="invisible"
+        android:onClick="reiniciar"/>
+
+
+</RelativeLayout>
