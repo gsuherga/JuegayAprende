@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Random r = new Random();
-        int formato = 2;// r.nextInt();
+        int formato = 1;// r.nextInt();
         Intent intent;
 
         /*

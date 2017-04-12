@@ -55,7 +55,9 @@ public class vertical extends AppCompatActivity {
         Intent intent = getIntent();
         acertadas = intent.getIntExtra("acertadas",0);
         recuento = intent.getIntExtra("recuento",0);
-        generar();
+
+
+        this.generar();
     }
 
     public void generar() {
@@ -66,17 +68,16 @@ public class vertical extends AppCompatActivity {
 
         int[] imagenes = {R.drawable.v1, R.drawable.v2, R.drawable.v3};
 
+
+        Resources resources = getResources();
         /*
         Creamos un vector con los edificios disponibles
          */
-
-        Resources edif = getResources();
-        String[] edificio = edif.getStringArray(R.array.edificio);
+        String[] edificio = resources.getStringArray(R.array.edificio);
         /*
         Creamos un vector con las ciudades disponibles
          */
-        Resources ciud = getResources();
-        String[] ciudades = ciud.getStringArray(R.array.ciudad);
+        String[] ciudades = resources.getStringArray(R.array.ciudad);
 
         /*
         Aquí decimos donde queremos que ponga la imagen
@@ -91,6 +92,7 @@ public class vertical extends AppCompatActivity {
         int f = fotos.nextInt(imagenes.length);
         imagen.setImageResource(imagenes[f]);
         Imagen = imagenes[f];
+        Imagen0 = imagenes[0];
 
         /*
         Aquí elegimos respuestas al azar: un edificio y una ciudad. La opción "ninguna" está siempre disponible por si ninguna respuesta es correcta.
@@ -165,115 +167,113 @@ public class vertical extends AppCompatActivity {
         //Boton marcada para el edificio
         boolean marcadoe = ((RadioButton) view).isChecked();
 
-        //Para ver si el edificio es correcto
+        // JAVI
+        // Comprobamos si esta marcado el boton solo una vez y fuera del switch.
+        // Creamos metodos para sumar y restar aciertos.
+        if (marcadoe) {
+            switch (view.getId()) {
 
-        switch (view.getId()) {
-            case R.id.primera:
-                if (marcadoe) {
-
+                case R.id.primera:
                     if (radioButton1.equals(correctae) && sumarPuntoEdificio == true) {
-                        acertadas = acertadas + 1;
-                        sumarPuntoEdificio = false;
-                        restarPuntoEdificio = true;
+                        this.sumarEdificioAcertado();
                     }else if(!radioButton1.equals(correctae) && restarPuntoEdificio == true){
-                        acertadas = acertadas - 1;
-                        sumarPuntoEdificio = true;
-                        restarPuntoEdificio = false;
+                        this.restarEdificioAcertado();
                     }
-                }
-                break;
-            case R.id.segunda:
-                if (marcadoe) {
-                    if (radioButton2.equals(correctae) && sumarPuntoEdificio == true) {
-                        acertadas = acertadas + 1;
-                        sumarPuntoEdificio = false;
-                        restarPuntoEdificio = true;
-                    }else if(!radioButton2.equals(correctae) && restarPuntoEdificio == true){
-                        acertadas = acertadas - 1;
-                        sumarPuntoEdificio = true;
-                        restarPuntoEdificio = false;
-                    }
-                }
-                break;
-            case R.id.tercera:
-                if (marcadoe) {
-                    if (!radioButton1.equals(correctae) && !radioButton2.equals(correctae) && sumarPuntoEdificio == true) {
-                        acertadas = acertadas + 1;
-                        sumarPuntoEdificio = false;
-                        restarPuntoEdificio = true;
-                    }else if((radioButton1.equals(correctae) || radioButton2.equals(correctae)) && restarPuntoEdificio == true){
-                        acertadas = acertadas - 1;
-                        sumarPuntoEdificio = true;
-                        restarPuntoEdificio = false;
-                    }
-                }
-                break;
-        }
+                    break;
 
+                case R.id.segunda:
+                    if (radioButton2.equals(correctae) && sumarPuntoEdificio == true) {
+                        this.sumarEdificioAcertado();
+                    }else if(!radioButton2.equals(correctae) && restarPuntoEdificio == true){
+                        this.restarEdificioAcertado();
+                    }
+                    break;
+
+                case R.id.tercera:
+                    if (!radioButton1.equals(correctae) && !radioButton2.equals(correctae) && sumarPuntoEdificio == true) {
+                        this.sumarEdificioAcertado();
+                    }else if(radioButton1.equals(correctae) || radioButton2.equals(correctae) && restarPuntoEdificio == true){
+                        this.restarEdificioAcertado();
+                    }
+                    break;
+            }
+        }
     }
+
+    public void sumarEdificioAcertado() {
+        acertadas = acertadas + 1;
+        sumarPuntoEdificio = false;
+        restarPuntoEdificio = true;
+    }
+
+    public void restarEdificioAcertado() {
+        acertadas = acertadas - 1;
+        sumarPuntoEdificio = true;
+        restarPuntoEdificio = false;
+    }
+
+
     public void ciudades (View view) {
 
         //Boton marcada para la ciudad
-
         boolean marcadoc = ((RadioButton) view).isChecked();
 
-        switch (view.getId()) {
-            case R.id.cuarta:
-                if (marcadoc) {
+        // JAVI
+        // Comprobamos si esta marcado el boton solo una vez y fuera del switch.
+        // Creamos metodos para sumar y restar aciertos.
+        if (marcadoc) {
+            switch (view.getId()) {
+                case R.id.cuarta:
                     if (radioButton4.equals(correctac) && sumarPuntoCiudad == true) {
-                        acertadas = acertadas + 1;
-                        sumarPuntoCiudad = false;
-                        restarPuntoCiudad = true;
-                    }else if(!radioButton4.equals(correctae) && restarPuntoCiudad == true){
-                        acertadas = acertadas - 1;
-                        restarPuntoCiudad = false;
-                        sumarPuntoCiudad = true;
+                        this.sumarCiudadAcertado();
+                    } else if (!radioButton4.equals(correctae) && restarPuntoCiudad == true) {
+                        this.restarCiudadAcertado();
                     }
-                }
-                break;
-            case R.id.quinta:
-                if (marcadoc) {
+                    break;
+                case R.id.quinta:
                     if (radioButton5.equals(correctac) && sumarPuntoCiudad == true) {
-                        acertadas = acertadas + 1;
-                        sumarPuntoCiudad = false;
-                        restarPuntoCiudad = true;
-                    }else if(!radioButton5.equals(correctae) && restarPuntoCiudad ==true){
-                        acertadas = acertadas - 1;
-                        restarPuntoCiudad = false;
-                        sumarPuntoCiudad = true;
+                        this.sumarCiudadAcertado();
+                    } else if (!radioButton5.equals(correctae) && restarPuntoCiudad == true) {
+                        this.restarCiudadAcertado();
                     }
-                }
-                break;
-            case R.id.sexta:
-                if (marcadoc) {
+                    break;
+                case R.id.sexta:
                     if (!radioButton4.equals(correctac) && !radioButton5.equals(correctac) && sumarPuntoCiudad == true) {
-                        acertadas = acertadas + 1;
-                        sumarPuntoCiudad = false;
-                        restarPuntoCiudad = true;
-                    }else if((radioButton4.equals(correctae) || radioButton5.equals(correctae)) && restarPuntoCiudad ==true){
-                        acertadas = acertadas - 1;
-                        restarPuntoCiudad = false;
-                        sumarPuntoCiudad = true;
+                        this.sumarCiudadAcertado();
+                    } else if (radioButton4.equals(correctae) || radioButton5.equals(correctae) && restarPuntoCiudad == true) {
+                        this.restarCiudadAcertado();
                     }
-                }
-                break;
+                    break;
+            }
         }
-
     }
+
+    public void sumarCiudadAcertado() {
+        acertadas = acertadas + 1;
+        sumarPuntoCiudad = false;
+        restarPuntoCiudad = true;
+    }
+
+    public void restarCiudadAcertado() {
+        acertadas = acertadas - 1;
+        restarPuntoCiudad = false;
+        sumarPuntoCiudad = true;
+    }
+
 
     public void seguir(View view) {
         sumarPuntoCiudad = true;
         sumarPuntoEdificio = true;
         restarPuntoCiudad = false;
         restarPuntoEdificio = false;
-        recuento = recuento + 1 ;
+        recuento = recuento + 2 ;
 
-        if (recuento == 16){
+        if (recuento == 10){
             mostrarPuntos(acertadas,recuento);
         }else {
 
             Random r = new Random();
-            int formato =  r.nextInt();
+            int formato =  1; //r.nextInt();
 
               /*
             Aquí decidimos formato vertical o apaisado de forma aleatoria.
@@ -296,12 +296,20 @@ public class vertical extends AppCompatActivity {
     }
 
     public void mostrarPuntos(int acertadas, int recuento){
+        ImageView seguir = (ImageView) findViewById(R.id.seguir);
+        ImageView reiniciar = (ImageView) findViewById(R.id.reiniciar);
         TextView puntuacion = (TextView) findViewById(R.id.Puntuacion);
+        seguir.setVisibility(View.INVISIBLE);
+        reiniciar.setVisibility(View.INVISIBLE);
         puntuacion.setText(getString(R.string.puntos)+acertadas+"\n"+getString(R.string.fallos)+(recuento-acertadas)+"\n"+getString(R.string.pulsa));
         puntuacion.setVisibility(View.VISIBLE);
     }
 
     public void reiniciar(View view) {
+        ImageView seguir = (ImageView) findViewById(R.id.seguir);
+        ImageView reiniciar = (ImageView) findViewById(R.id.reiniciar);
+        seguir.setVisibility(View.VISIBLE);
+        reiniciar.setVisibility(View.VISIBLE);
         final Context context = this;
         Intent intent = new Intent(context, MainActivity.class);
         TextView puntuacion = (TextView) findViewById(R.id.Puntuacion);

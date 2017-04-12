@@ -111,6 +111,7 @@
 </LinearLayout>
 
     <ImageButton
+        android:id="@+id/seguir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="seguir"
@@ -120,6 +121,7 @@
         />
 
     <ImageButton
+        android:id="@+id/reiniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="reiniciar"

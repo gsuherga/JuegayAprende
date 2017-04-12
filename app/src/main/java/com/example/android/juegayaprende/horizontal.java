@@ -385,7 +385,7 @@ public class horizontal extends AppCompatActivity {
         sumarPuntoEdificio = true;
         restarPuntoCiudad = false;
         restarPuntoEdificio = false;
-        recuento = recuento +2;
+        recuento = recuento + 2;
 
         if (recuento == 20){
             mostrarPuntos(acertadas,recuento);
@@ -393,7 +393,7 @@ public class horizontal extends AppCompatActivity {
         }else {
 
             Random r = new Random();
-            int formato = 2; //r.nextInt();
+            int formato = r.nextInt();
 
             // Aqui decidimos formato vertical o apaisado de forma aleatoria.
             if (formato % 2 == 0){
@@ -414,12 +414,20 @@ public class horizontal extends AppCompatActivity {
     }
 
     public void mostrarPuntos(int acertadas, int recuento){
+        ImageView seguir = (ImageView) findViewById(R.id.seguir);
+        ImageView reiniciar = (ImageView) findViewById(R.id.reiniciar);
         TextView puntuacion = (TextView) findViewById(R.id.Puntuacion);
+        seguir.setVisibility(View.INVISIBLE);
+        reiniciar.setVisibility(View.INVISIBLE);
         puntuacion.setText(getString(R.string.puntos)+acertadas+"\n"+getString(R.string.fallos)+(recuento-acertadas)+"\n"+getString(R.string.pulsa));
         puntuacion.setVisibility(View.VISIBLE);
     }
 
     public void reiniciar(View view) {
+        ImageView seguir = (ImageView) findViewById(R.id.seguir);
+        ImageView reiniciar = (ImageView) findViewById(R.id.reiniciar);
+        seguir.setVisibility(View.VISIBLE);
+        reiniciar.setVisibility(View.VISIBLE);
         final Context context = this;
         Intent intent = new Intent(context, MainActivity.class);
         TextView puntuacion = (TextView) findViewById(R.id.Puntuacion);
