@@ -20,17 +20,18 @@ public class horizontal extends AppCompatActivity {
 
     //Recuperamos el número de preguntas acertadas y respondidas.
 
-    //Variables para los puntos.
+    //Variables para los puntos. For points.
     int acertadas;
     int recuento;
 
-    //Variables para saber si sumar puntos o no si el usuario cambia de decisión.
+    //Variables para saber si sumar puntos o no si el usuario cambia de decisión. To know if the answer is right.
     boolean sumarPuntoEdificio = true;
     boolean sumarPuntoCiudad = true;
     boolean restarPuntoEdificio = false;
     boolean restarPuntoCiudad = false;
 
-    // Variables para la foto y los radiobotones
+    // Variables para la foto y los radiobotones. Pictures and radiobuttons. To save right answers.
+
     int Imagen;
     int Imagen0;
     String radioButton1,radioButton2,radioButton4,radioButton5;
@@ -45,42 +46,29 @@ public class horizontal extends AppCompatActivity {
         acertadas = intent.getIntExtra("acertadas",0);
         recuento = intent.getIntExtra("recuento",0);
 
-        // JESUS
-        //generar();
-
-        // JAVI
         this.generar();
 
     }
 
-
+/*
+Aquí generamos la pantalla, con imagen y respuestas a la misma. To make the screen with a picture and the answers.
+ */
     public void generar() {
 
-        // Creamos un vector con las imágenes disponibles
+        // Creamos un vector con las imágenes disponibles. Available pictures to show.
         int [] imagenes = {R.drawable.h1, R.drawable.h2, R.drawable.h3, R.drawable.h4, R.drawable.h5, R.drawable.h6, R.drawable.h7, R.drawable.h8, R.drawable.h9};
 
-        // JESUS
-        // Creamos un vector con los edificios disponibles
-//       Resources edif = getResources();
-//       String[] edificio = edif.getStringArray(R.array.edificio);
-//
-//       // Creamos un vector con las ciudades disponibles
-//
-//        Resources ciud = getResources();
-//        String[] ciudades = ciud.getStringArray(R.array.ciudad);
-
-        // JAVI
         Resources resources = getResources();
-        // Creamos un vector con los edificios disponibles
+        // Creamos un vector con los edificios disponibles. Buildings.
         String[] edificio = resources.getStringArray(R.array.edificio);
-        // Creamos un vector con las ciudades disponibles
+        // Creamos un vector con las ciudades disponibles. Cities.
         String[] ciudades = resources.getStringArray(R.array.ciudad);
 
 
-        // Aqui decimos donde queremos que ponga la imagen
+        // Aqui decimos donde queremos que ponga la imagen. To show a random picture.
         ImageView image = (ImageView) (findViewById(R.id.foto_horizontal));
 
-        // Aqui elegimos una foto al azar
+        // Aqui elegimos una foto al azar. Random picture
         Random fotos = new Random();
         int f = fotos.nextInt(imagenes.length);
         image.setImageResource(imagenes[f]);
@@ -89,6 +77,7 @@ public class horizontal extends AppCompatActivity {
 
 
         // Aqui elegimos respuestas al azar: un edificio y una ciudad. La opcion "ninguna" esta siempre disponible por si ninguna respuesta es correcta.
+        // To write random options (They could be repeated) of answers.
         int opciones = 1;
 
         do {
@@ -113,8 +102,6 @@ public class horizontal extends AppCompatActivity {
 
         }while(opciones <= 3);
 
-
-
         opciones = 1;
 
         do {
@@ -137,7 +124,6 @@ public class horizontal extends AppCompatActivity {
             opciones = opciones +1;
         }while(opciones <= 3);
 
-        // JESUS
         if (Imagen == Imagen0) {
 
             correctae = getString(R.string.Pasaje);
@@ -183,20 +169,15 @@ public class horizontal extends AppCompatActivity {
             correctae = getString(R.string.Plaza);
             correctac = getString(R.string.Madrid);
         }
-
-        // JAVI
-/*        String[] edificiosCorrectos = {getString(R.string.Pasaje), getString(R.string.Alcazar), getString(R.string.Plaza), getString(R.string.Alhambra), getString(R.string.Basilica), getString(R.string.Catedral), getString(R.string.Catedral), getString(R.string.Mezquita), getString(R.string.Plaza)};
-        String[] ciudadesCorrectas = {getString(R.string.Albacete), getString(R.string.Sevilla), getString(R.string.Sevilla), getString(R.string.Granada), getString(R.string.Barcelona), getString(R.string.Leon), getString(R.string.Sevilla), getString(R.string.Cordoba), getString(R.string.Madrid)};
-
-        correctae = edificiosCorrectos[Imagen];
-        correctac = ciudadesCorrectas[Imagen]; */
     }
 
+    /*
+    Método para comprobar la respuesta para el edificio. To check about the building.
+     */
     public void Edificios (View view) {
-        //Boton marcada para el edificio
+        //Boton marcada para el edificio. To check the radiobuttons (buldings).
         boolean marcadoe = ((RadioButton) view).isChecked();
 
-        // JAVI
         // Comprobamos si esta marcado el boton solo una vez y fuera del switch.
         // Creamos metodos para sumar y restar aciertos.
         if (marcadoe) {
@@ -227,74 +208,29 @@ public class horizontal extends AppCompatActivity {
                     break;
             }
         }
-
-        // JESUS
-        //Para ver si el edificio es correcto
-//        switch (view.getId()) {
-//            case R.id.primera:
-//                if (marcadoe) {
-//
-//                    if (radioButton1.equals(correctae) && sumarPuntoEdificio == true) {
-//                        acertadas = acertadas + 1;
-//                        sumarPuntoEdificio = false;
-//                        restarPuntoEdificio = true;
-//                    }else if(!radioButton1.equals(correctae) && restarPuntoEdificio == true){
-//                        acertadas = acertadas - 1;
-//                        sumarPuntoEdificio = true;
-//                        restarPuntoEdificio = false;
-//                    }
-//                }
-//                break;
-//            case R.id.segunda:
-//                if (marcadoe) {
-//                    if (radioButton2.equals(correctae) && sumarPuntoEdificio == true) {
-//                        acertadas = acertadas + 1;
-//                        sumarPuntoEdificio = false;
-//                        restarPuntoEdificio = true;
-//                    }else if(!radioButton2.equals(correctae) && restarPuntoEdificio == true){
-//                        acertadas = acertadas - 1;
-//                        sumarPuntoEdificio = true;
-//                        restarPuntoEdificio = false;
-//                    }
-//                }
-//                break;
-//            case R.id.tercera:
-//                if (marcadoe) {
-//                    if (!radioButton1.equals(correctae) && !radioButton2.equals(correctae) && sumarPuntoEdificio == true) {
-//                        acertadas = acertadas + 1;
-//                        sumarPuntoEdificio = false;
-//                        restarPuntoEdificio = true;
-//                    }else if(radioButton1.equals(correctae) || radioButton2.equals(correctae) && restarPuntoEdificio == true){
-//                        acertadas = acertadas - 1;
-//                        sumarPuntoEdificio = true;
-//                        restarPuntoEdificio = false;
-//                    }
-//                }
-//                break;
-//        }
-
     }
-
-    // JAVI
+    /*
+    Para sumar puntos si el edificio es el correcto. To add points if the building is right.
+     */
     public void sumarEdificioAcertado() {
         acertadas = acertadas + 1;
         sumarPuntoEdificio = false;
         restarPuntoEdificio = true;
     }
 
-    // JAVI
     public void restarEdificioAcertado() {
         acertadas = acertadas - 1;
         sumarPuntoEdificio = true;
         restarPuntoEdificio = false;
     }
-
+/*
+Método para comprobar la ciudad. To check about city.
+ */
     public void ciudades (View view) {
 
-        //Boton marcada para la ciudad
+        //Boton marcada para la ciudad. To check the radiobuttons (cities).
         boolean marcadoc = ((RadioButton) view).isChecked();
 
-        // JAVI
         // Comprobamos si esta marcado el boton solo una vez y fuera del switch.
         // Creamos metodos para sumar y restar aciertos.
         if (marcadoc) {
@@ -323,49 +259,11 @@ public class horizontal extends AppCompatActivity {
             }
         }
 
-//        switch (view.getId()) {
-//        case R.id.cuarta:
-//            if (marcadoc) {
-//                if (radioButton4.equals(correctac) && sumarPuntoCiudad == true) {
-//                    acertadas = acertadas + 1;
-//                    sumarPuntoCiudad = false;
-//                    restarPuntoCiudad = true;
-//                }else if(!radioButton4.equals(correctae) && restarPuntoEdificio == true){
-//                    acertadas = acertadas - 1;
-//                    restarPuntoEdificio = false;
-//                    sumarPuntoEdificio = true;
-//                }
-//            }
-//            break;
-//        case R.id.quinta:
-//            if (marcadoc) {
-//                if (radioButton5.equals(correctac) && sumarPuntoCiudad == true) {
-//                    acertadas = acertadas + 1;
-//                    sumarPuntoCiudad = false;
-//                    restarPuntoCiudad = true;
-//                }else if(!radioButton5.equals(correctae) && restarPuntoEdificio ==true){
-//                    acertadas = acertadas - 1;
-//                    restarPuntoEdificio = false;
-//                    sumarPuntoEdificio = true;
-//                }
-//            }
-//            break;
-//        case R.id.sexta:
-//            if (marcadoc) {
-//                if (!radioButton4.equals(correctac) && !radioButton5.equals(correctac) && sumarPuntoCiudad == true) {
-//                    acertadas = acertadas + 1;
-//                    sumarPuntoCiudad = false;
-//                    restarPuntoCiudad = true;
-//                }else if(radioButton4.equals(correctae) || radioButton5.equals(correctae) && restarPuntoEdificio ==true){
-//                    acertadas = acertadas - 1;
-//                    restarPuntoEdificio = false;
-//                    sumarPuntoEdificio = true;
-//                }
-//            }
-//            break;
-//    }
-
     }
+
+    /*
+    Para sumar puntos si la ciudad escogida es la correcta. To add points if the city is right.
+     */
 
     public void sumarCiudadAcertado() {
         acertadas = acertadas + 1;
@@ -380,6 +278,10 @@ public class horizontal extends AppCompatActivity {
     }
 
 
+    /*
+    Para seguir jugando hasta mostrar 5 fotos y poner aciertos y fallos. To continue playing up to five pictures and show right
+    and wrong answers.
+     */
     public void seguir(View view) {
         sumarPuntoCiudad = true;
         sumarPuntoEdificio = true;
@@ -387,7 +289,7 @@ public class horizontal extends AppCompatActivity {
         restarPuntoEdificio = false;
         recuento = recuento + 2;
 
-        if (recuento == 20){
+        if (recuento == 10){
             mostrarPuntos(acertadas,recuento);
 
         }else {
@@ -395,7 +297,7 @@ public class horizontal extends AppCompatActivity {
             Random r = new Random();
             int formato = r.nextInt();
 
-            // Aqui decidimos formato vertical o apaisado de forma aleatoria.
+            // Aqui decidimos formato vertical o apaisado de forma aleatoria. To continue, random horizontal or vertical.
             if (formato % 2 == 0){
                 Intent otrapregunta = new Intent(horizontal.this, horizontal.class);
                 otrapregunta.putExtra("acertadas", acertadas);
@@ -413,6 +315,10 @@ public class horizontal extends AppCompatActivity {
 
     }
 
+    /*
+    Para mostrar puntos. To show points.
+     */
+
     public void mostrarPuntos(int acertadas, int recuento){
         ImageView seguir = (ImageView) findViewById(R.id.seguir);
         ImageView reiniciar = (ImageView) findViewById(R.id.reiniciar);
@@ -422,6 +328,10 @@ public class horizontal extends AppCompatActivity {
         puntuacion.setText(getString(R.string.puntos)+acertadas+"\n"+getString(R.string.fallos)+(recuento-acertadas)+"\n"+getString(R.string.pulsa));
         puntuacion.setVisibility(View.VISIBLE);
     }
+
+    /*
+    Para reinicar la aplicación. To restart the application.
+     */
 
     public void reiniciar(View view) {
         ImageView seguir = (ImageView) findViewById(R.id.seguir);
@@ -434,6 +344,5 @@ public class horizontal extends AppCompatActivity {
         puntuacion.setVisibility(View.INVISIBLE);
         startActivity(intent);
     }
-
 
 }

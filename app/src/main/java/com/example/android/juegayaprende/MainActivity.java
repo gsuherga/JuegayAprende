@@ -9,6 +9,10 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    /*
+    Variables globales para puntos y número de preguntas. Global variables for points and number of questions.
+     */
+
     int recuento = 0;
     int acertadas = 0;
 
@@ -27,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
 
         /*
-            Aquí decidimos formato vertical o apaisado de forma aleatoria.
+            Aquí decidimos formato vertical o apaisado de forma aleatoria. To choose horizontal or vertical activity.
          */
 
         if (formato % 2 == 0){
@@ -46,7 +50,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-
 
 }
