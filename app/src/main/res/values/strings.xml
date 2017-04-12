@@ -161,6 +161,8 @@
     <string name="Alcazar">Alcazar (Palace)</string>
     <string name="Basilica">Basilica</string>
     <string name="Mezquita">Mosque</string>
+    <string name="ciudad">Where is what you can see in the picture?</string>
+    <string name="edificio">What can you see in the picture?</string>
 
 
 </resources>

@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name"> Juega y Aprende </string>
     <string name="subtitulo">" Contesta preguntas, gana puntos y aprende"</string>
+    <string name="edificio">"¿Qué es lo que se ve en la foto?"</string>
+    <string name="ciudad">"¿Dónde está lo que se ve en la foto?"</string>
     <string name="puntos">Aciertos: </string>
     <string name="fallos">Fallos: </string>
 
