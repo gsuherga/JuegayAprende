@@ -1,10 +1,12 @@
 <resources>
-    <string name="subtitulo">Answer questions, gets points and learn</string>
+    <string name="subtitulo">Answer questions, get points and learn</string>
     <string name="Jugar">Play</string>
     <string name="app_name">Play and learn</string>
     <string name="fallos">Mistakes: </string>
-    <string name="puntos">Right asnwers: </string>
+    <string name="puntos">Right answers: </string>
     <string name="pulsa">Click here to play again</string>
+    <string name="ciudad">Where is what you can see in the picture?</string>
+    <string name="edificio">What can you see in the picture?</string>
 
 
     <string-array name="ciudad">
@@ -124,7 +126,7 @@
         <item>Aqueduct</item>
         <item>Basilica</item>
         <item>Mosque</item>
-        <item>Pasaje</item>
+        <item>Passageway</item>
         <item>Alhambra</item>
         <item>Square</item>
         <item>Alcazar (Palace)</item>
@@ -156,13 +158,10 @@
     <string name="Acueducto">Aqueduct</string>
     <string name="Catedral">Cathedral</string>
     <string name="Alhambra">Alhambra</string>
-    <string name="Pasaje">Pasaggeway</string>
+    <string name="Pasaje">Passageway</string>
     <string name="Plaza">Square</string>
     <string name="Alcazar">Alcazar (Palace)</string>
     <string name="Basilica">Basilica</string>
     <string name="Mezquita">Mosque</string>
-    <string name="ciudad">Where is what you can see in the picture?</string>
-    <string name="edificio">What can you see in the picture?</string>
-
 
 </resources>
