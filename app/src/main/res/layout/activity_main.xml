@@ -32,6 +32,16 @@
         app:layout_constraintTop_toTopOf="@+id/interrogaciones"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Jugar"
+        app:layout_constraintBottom_toBottomOf="@+id/interrogaciones"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="juega"
+        />
+
     <TextView
         android:id="@+id/edificios"
         android:layout_width="wrap_content"
@@ -43,7 +53,8 @@
         app:layout_constraintTop_toBottomOf="@+id/interrogaciones"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/ciudades"
+        android:layout_margin="20dp"
         />
 
     <TextView
@@ -57,7 +68,8 @@
         app:layout_constraintTop_toBottomOf="@+id/edificios"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="30dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/subtitulo"
         />
 
 
@@ -69,21 +81,12 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@android:color/holo_green_dark"
-        app:layout_constraintTop_toBottomOf="@+id/ciudades"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="30dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp"
+         />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Jugar"
-            app:layout_constraintTop_toBottomOf="@+id/subtitulo"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="40dp"
-            android:onClick="juega"
-            />
+
 
 </android.support.constraint.ConstraintLayout>
