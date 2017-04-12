@@ -5,14 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.juegayaprende.MainActivity"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryDark"
+    >
 
     <ImageView
         android:id="@+id/interrogaciones"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:src="@drawable/inicio"
-        android:scaleType="centerCrop" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/inicio" />
 
 
     <TextView
