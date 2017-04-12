@@ -268,12 +268,12 @@ public class vertical extends AppCompatActivity {
         restarPuntoEdificio = false;
         recuento = recuento + 2 ;
 
-        if (recuento == 10){
+        if (recuento == 20){
             mostrarPuntos(acertadas,recuento);
         }else {
 
             Random r = new Random();
-            int formato =  1; //r.nextInt();
+            int formato = r.nextInt();
 
               /*
             Aquí decidimos formato vertical o apaisado de forma aleatoria.
@@ -316,8 +316,5 @@ public class vertical extends AppCompatActivity {
         puntuacion.setVisibility(View.INVISIBLE);
         startActivity(intent);
     }
-
-
-
 
 }
